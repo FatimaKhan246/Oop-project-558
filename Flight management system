@@ -1,0 +1,366 @@
+#include <stdlib.h>
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+
+using namespace std;
+
+
+
+class node
+ {public:
+    node*next;
+     int v;
+int flightNumber;
+int planeId;
+int day;
+int month;
+int year;
+int departureTime;
+
+
+};
+class customer
+{public:
+int customerId;
+int date;
+string name;
+int phone;
+int MONTH;
+int DAY;
+int YEAR;
+int numOfFlights;
+int milesTraveled;
+int month;
+int day;
+int year;
+int seat;
+int Randseat =  1 + (rand() % 100);
+void storeData ();
+void cancel_seat ();
+void customer1(){
+    cout<<endl;
+   
+cout<<"ENTER NAME:";
+cin>>name;
+cout<<"ENTER PHONE NUMBER:";
+cin>>phone;
+cout<<"CUSTOMER ID ASSIGNED:";
+
+
+srand(customerId	);
+	const char arrayNum[11] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9','10'};
+	int RandIndex = rand() % 11;
+	cout<<RandIndex<<endl;
+
+cout << "Enter birthday: mm/dd/yyyy : ";
+    cin >>month>>day>>year;
+
+   
+cout<<"ENTER DATE oF JOURNEY:"<<endl<<endl;
+cout<<"ENTER DATE :"<<endl;
+cin>>DAY;
+cout<<"ENTER MONTH:"<<endl;
+cin>>MONTH;
+cout<<"ENTER YEAR:"<<endl;
+cin>>YEAR;
+int a,i,age[100];
+string name[100];
+cout<<"\nHow many Members in your family?\n";
+	cin>>a;
+	cout<<"Enter the NAME AND Age of Your "<<a<<" Family Members:\n";
+	for(int i=0;i<a;i++)
+	{cout<<"name: ";
+    cin>>name[i];
+    cout<<"age: ";
+    cin>>age[i];
+	}
+
+
+
+}
+
+void cutomerDara(){
+cout<<"NAME OF CUSTOMER: "<<name<<endl<<endl;
+cout<<"DATE OF FLIGHT: "<<DAY<<"/"<<MONTH<<"/"<<YEAR<<endl<<endl;
+cout<<"CUSTOMER ID: "<<customerId<<endl<<endl;
+cout<<"CUSTOMER PHONE NUMBER: "<< phone<<endl<<endl;
+cout<<"CUSTOMER SEAT NUMBER:"<< Randseat<< endl;	
+
+
+
+
+}
+};
+
+void customer::storeData()
+{
+fstream FileName;               
+    FileName.open("FlightSystem", ios::out);    
+    if (!FileName){                 
+        cout<<"Error while creating the file";    
+    }
+    else{
+        cout<<"File created successfully"; 
+		
+			FileName<<"Name :"<<name<<endl<<endl;
+				FileName<<"CoustomerId :"<<customerId<<endl<<endl;
+					FileName<< "Phone :"<<phone<<endl<<endl;
+						FileName<<"Seat No:"<<Randseat<<endl<<endl;   
+        FileName.close();           
+    }
+}
+
+class ticket:public customer
+{
+public:
+customer1();
+
+string customerId;
+string name;
+int flightNum;
+int ticketNumber;
+string ticketType;
+int costOfFlight;
+bool discount;
+string reasonForDiscount;
+string dateTime;
+int seatNumber;
+void ticket1()
+{int customerId;
+int dateTime;
+string name;
+cout<<endl;
+cout<<"____________________________________"<<endl<<endl;
+cout<<"                                  TICKET  "<<endl<<endl;
+cout<<"____________________________________"<<endl<<endl;
+
+cutomerDara();
+}
+
+
+
+};
+class offer
+{
+public:
+int offerId;
+int flightNumber;
+string offerType;
+int cost;
+int discount;
+int discountAmount;
+
+
+
+
+
+};
+class plane
+{
+public:
+int planeId;
+string description;
+int numberOfMilesTraveled;
+void TRAINTYPE(){
+int type;
+cout<<endl;
+cout<<"____________________________________"<<endl<<endl;
+
+}
+
+};
+class airport
+{
+public:
+string airportName;
+string country;
+string usualWeatherCondition;
+int milesFromBeirut;
+};
+
+
+
+void information(){
+cout<<"____________________________________"<<endl;
+cout<<"                        FLIGHT MANUAL"<<endl;
+cout<<"____________________________________"<<endl<<endl;
+cout<<"Flight attendants, prepare for take-off please."<<endl;
+cout<<"Cabin crew, please take your seats for take-off."<<endl;
+cout<<"Within a minute after take-off,"<<endl;
+cout<<"an announcement may be made reminding passengers to keep their seat belts fastened."<<endl;
+}void Quit_program()
+{
+    cout<<"*****GOOD BYE FROM AIRWAYS RESERVATION SYSTEM******"<<endl;
+    }
+   
+void customer::cancel_seat()
+{
+	char name[50];
+cout<<"____________________________________"<<endl;
+cout<<"                      CANCEL TICKET"<<endl;
+cout<<"____________________________________"<<endl<<endl;
+    cout<<"Enter passenger name for cancelling"<<endl;
+    cin>>name;
+       
+           if (name){
+    cout << "Cancel the ticket"<<endl;
+  }
+  else {
+    cout << "Passenger not found"<<endl;
+  }
+ 
+
+    }
+    
+void ticket1()
+{
+int customerId;
+int dateTime;
+string name;
+cout<<endl;
+
+cout<<"____________________________________"<<endl;
+cout<<"                                  TICKET  "<<endl;
+cout<<"____________________________________"<<endl;
+}
+
+
+
+
+
+int main(){
+//    LinkedList ll;
+    int v,choice;
+cout<<"____________________________________"<<endl;
+cout<<"                                      WELCOME TO FLIGHT RESERVATION SYSTEM             "<<endl;
+cout<<"____________________________________"<<endl;
+cout<<"                                           <><>AVAILABLE FLIGHTS ARE:<><>        "<<endl;
+cout<<"____________________________________"<<endl;
+cout<<"No1: (Islamabad, Amman) Tue, Thu @2:00 "<<endl;
+cout<<"No2: (Islamabad, Amman) Wed @18:00"<<endl;
+cout<<"No3: (Islamabad, Paris) Mon, Sat @13:30"<<endl;
+cout<<"No4: (Islamabad, Madrid) Mon @9:00"<<endl;
+cout<<"No5: (Islamabad, Dubai) Mon, Tue, Thu, Sun @19:15 "<<endl;
+cout<<"No6: (Islamabad, Cairo) Tue, Thu @14:00"<<endl<<endl;
+
+
+		cout<<"SELECT FLIGHT NUMBER: ";
+		cin>>choice;
+   switch (choice)
+		{
+			case 1:
+				cout<<"(Islamabad, Amman) "<<endl;
+                 cout<<"time /date :  Tue, Thu @2:00"<<endl;
+               cout<<"COST IS :8000"<<endl<<endl;
+				break;
+
+			case 2:
+				cout<<"(Islamabad, Amman) "<<endl;
+                cout<<"time /date :  Wed @18:00"<<endl;
+                  cout<<"COST IS :8000"<<endl<<endl;
+				break;
+
+			case 3:
+				cout<<"(Islamabad, Paris) "<<endl;
+                  cout<<"time /date :  Mon, Sat @13:30 "<<endl;
+                    cout<<"COST IS :9000"<<endl<<endl;
+				break;
+
+			case 4:
+				cout<<"(Islamabad, Madrid) "<<endl;
+				  cout<<"time /date : Mon @9:00 "<<endl;
+				    cout<<"COST IS :10000"<<endl<<endl;
+				break;
+
+			case 5:
+				cout<<"(Islamabad, Dubai) "<<endl;
+				  cout<<"time /date :  Mon, Tue, Thu, Sun @19:15"<<endl;
+				    cout<<"COST IS :5000"<<endl<<endl;
+				break;
+
+			case 6:
+				cout<<"(Islamabad, Cairo "<<endl;
+                  cout<<"time /date : Tue, Thu @14:00"<<endl;
+                    cout<<"COST IS :6000"<<endl<<endl;
+				break;}
+
+customer C;
+C.customer1();
+
+int cost,a;
+int discount;
+int discountAmount;
+
+    cout<<"__________________________________"<<endl;
+    cout<<"                                 DISCOUNT"<<endl;
+    cout<<"__________________________________"<<endl<<endl;
+    cout<<"ENTER TOTAL COST ";
+    cin>>cost;
+
+   float discount_percentage=5;
+   float A;
+
+   A = (discount_percentage*cost)/100;
+    cout<<"Discount amount :"<<A<<endl;
+     int    b=(cost-A);
+
+    cout<<"TOTAl BILL pay: "<<b<<endl;
+
+    cout<<endl;
+    
+cout<<"____________________________________"<<endl;
+    cout<<"                    FINALLY"<<endl;
+cout<<"____________________________________"<<endl;
+    int ch, val;
+    cout<<endl<<endl;
+   cout<<"1) FOR FLIGHT MANUAL "<<endl;
+   cout<<"2) CUSTOMER TICKET"<<endl;
+   cout<<"3) CANCEL THE TICKET"<<endl;
+   cout<<"4) Exit"<<endl;
+
+      do{
+        cout<<"<<<<<<<<<<<<<<<<<Enter choice:>>>>>>>>>>>>> "<<endl;
+      cin>>ch;
+      switch(ch) {
+         case 1: {
+cout<<"information "<<endl;
+information();
+break;
+        }
+         case 2: {
+          ticket1();
+
+          C.cutomerDara();
+
+
+          cout<<"."<<endl;
+cout<<"!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!-!"<<endl;
+            break;
+         }
+         case 3: {
+             C.cancel_seat();
+
+
+            break;
+         }
+         case 4: {
+            cout<<"Exit"<<endl;
+          Quit_program();
+            break;
+         }
+         default: {
+            cout<<"Invalid Choice"<<endl;
+         }
+      } }
+while(ch !=4);
+
+ticket T;
+//plane.P;
+//T.ticket1();
+offer O;
+C.storeData();
+
+
+   return 0;
+   }
